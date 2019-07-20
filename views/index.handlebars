@@ -1,0 +1,20 @@
+<header class="bg-black-90 fixed w-100 ph3 pv3">
+  <nav class="f6 tracked">
+    <a href="/" class="dib dim white link mr3">POCKET FILE SHARE</a>
+    <p class="dib white">Current path: <span class="bold">{{path}}</span></p>
+  </nav>
+</header>
+
+<main class="ph3 pt6">
+  {{#if files}}
+    <ul class="list ba b--light-silver br2 pa0">
+      {{#each files}}
+        <li class="bb b--light-silver pa3">
+          <a href="{{url}}" class="dark-gray fw6 link hover-blue underline-hover">{{text}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>Nothing here ¯\_(ツ)_/¯
+  {{/if}}
+</main>
